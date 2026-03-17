@@ -1,0 +1,11 @@
+version: '3.8' # l’avertissement n’empêche rien, mais vous pouvez le supprimer
+
+services:
+  front:
+    build: .
+    image: cine-review-front-api-frontend:latest
+    ports:
+      - '3001:80'
+    environment:
+      - NODE_ENV=production
+      - SQL_PAGE_SIZE=25
