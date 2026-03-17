@@ -1,0 +1,16 @@
+hgroup {
+  text-align: center;
+  padding: 2rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  section {
+    justify-content: center;
+  }
+}
