@@ -1,5 +1,3 @@
-version: '3.8' # l’avertissement n’empêche rien, mais vous pouvez le supprimer
-
 services:
   front:
     build: .
