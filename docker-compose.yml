@@ -1,7 +1,7 @@
 services:
   front:
     build: .
-    image: cine-review-front-api-frontend:latest
+    image: cine-review-front:latest
     ports:
       - '3001:80'
     environment:
