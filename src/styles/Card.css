@@ -11,8 +11,3 @@ section article img {
   width: 200px;
   border-radius: 15px;
 }
-
-section article img:hover {
-  transform: scale(1.03);
-  transition: transform 0.3s ease;
-}

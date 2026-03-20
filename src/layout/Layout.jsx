@@ -1,13 +1,13 @@
-import "../styles/Layout.css";
+import '../styles/Layout.css'
 
-import Header from "../components/Header";
+import Header from '../components/Header'
 
 export default function App({ children }) {
-	return (
-		<>
-			<Header />
+  return (
+    <>
+      <Header />
 
-			<main>{children}</main>
-		</>
-	);
+      <main>{children}</main>
+    </>
+  )
 }

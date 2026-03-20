@@ -3,14 +3,19 @@ hgroup {
   padding: 2rem;
 }
 
-section {
+.home-section {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
+.home-section article img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
-  section {
+  .home-section {
     justify-content: center;
   }
 }

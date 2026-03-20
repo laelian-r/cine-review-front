@@ -1,0 +1,26 @@
+.movie-detail-section {
+  display: flex;
+  gap: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.movie-detail-section article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: start;
+  gap: 1rem;
+}
+
+.movie-detail-section article img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-detail-section article .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

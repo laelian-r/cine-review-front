@@ -1,17 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './layout/Layout'
 import Home from './pages/Home'
 import MovieDetail from './pages/MovieDetail'
+import './App.css'
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/movie/:id" element={<MovieDetail />} />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/movies" element={<Home />} />
+          <Route path="/movies/:id" element={<MovieDetail />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   )
 }
-
-export default App

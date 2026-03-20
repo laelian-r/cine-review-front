@@ -1,22 +1,26 @@
-import '../styles/Home.css'
+import { useEffect, useState } from 'react'
 import Card from '../components/Card'
+import '../styles/Home.css'
 
 export default function Home() {
+  const [movies, setMovies] = useState([])
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}/movies`)
+      .then((res) => res.json())
+      .then((data) => setMovies(data))
+  }, [])
+
   return (
-    <>
-      <h1>Cine Review</h1>
-      <section>
+    <section className="home-section">
+      {movies.map((movie) => (
         <Card
-          image="https://cinedweller.com/wp-content/uploads/2024/12/DRAGONS_120_DECLI3.jpg"
-          title="Dragon"
-          to="/movie/1"
+          key={movie.id}
+          image={movie.image}
+          title={movie.title}
+          to={`/movies/${movie.id}`}
         />
-        <Card
-          image="https://fr.web.img6.acsta.net/c_310_420/img/fa/90/fa90ab7c0b300af60d9cc5dc36deef3f.jpg"
-          title="Le Parc"
-          to="/movie/2"
-        />
-      </section>
-    </>
+      ))}
+    </section>
   )
 }
