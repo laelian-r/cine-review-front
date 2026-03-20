@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import '../styles/Header.css'
 import Buttons from './Buttons'
 
@@ -11,19 +12,16 @@ export default function Header() {
         <nav>
           <ul>
             <li>
-              <Buttons href="/login" text="Connexion" />
+              <NavLink to="/login">Connexion</NavLink>
             </li>
             <li>
-              <Buttons
-                className="sign-up"
-                href="/register"
-                text="Inscription"
-              />
+              <NavLink to="/register" className="sign-up">
+                Inscription
+              </NavLink>
             </li>
           </ul>
         </nav>
       </header>
-      ;
     </>
   )
 }
