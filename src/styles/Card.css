@@ -11,3 +11,7 @@ section article img {
   width: 200px;
   border-radius: 15px;
 }
+
+.description {
+  color: rgb(85, 85, 85);
+}

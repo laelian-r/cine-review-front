@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
       <header>
-        <a href="/">
+        <a href="/movies">
           <h1>CineReview</h1>
         </a>
         <nav>

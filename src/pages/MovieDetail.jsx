@@ -16,14 +16,16 @@ export default function MovieDetail() {
   if (!movie) return <p>Chargement...</p>
 
   return (
-    <section className="movie-detail-section">
-      <Card
-        key={movie.id}
-        image={movie.image}
-        title={movie.title}
-        category={movie.category}
-        description={movie.description}
-      />
-    </section>
+    <>
+      <section className="movie-detail-section">
+        <Card
+          key={movie.id}
+          image={movie.image}
+          title={movie.title}
+          category={movie.category}
+          description={movie.description}
+        />
+      </section>
+    </>
   )
 }

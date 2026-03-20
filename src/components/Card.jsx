@@ -1,17 +1,17 @@
 import '../styles/Card.css'
 
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Card({ image, title, category, description, to }) {
   return (
     <article>
-      <Link to={to}>
+      <NavLink className="nav-link" to={to}>
         <img src={image} alt={title} />
-      </Link>
+      </NavLink>
       <div className="text-container">
         <h3>{title}</h3>
         <p>{category}</p>
-        <p>{description}</p>
+        <p className="description">{description}</p>
       </div>
     </article>
   )
